@@ -1,0 +1,124 @@
+
+/* *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+header{
+  background-color: rgb(87, 22, 22);
+} */
+
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Encabezado y navegación */
+header {
+    background-color: #111;
+    padding: 20px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+.signup {
+    background-color: #ff6600;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+/* Sección principal con banner */
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.hero-content {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Sección de modos de juego */
+.game-modes {
+    padding: 50px;
+    text-align: center;
+}
+.modes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.mode {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+}
+
+/* Galería */
+.gallery {
+    padding: 50px;
+    background-color: #111;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
+}

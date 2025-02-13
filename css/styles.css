@@ -55,6 +55,26 @@ nav ul li a {
     padding: 8px 15px;
     border-radius: 5px;
 }
+    /*Descripcion*/
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Esto hace que ocupe toda la altura de la ventana */
+    padding: 20px;
+}
+
+.description h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.description p {
+    font-size: 1.2rem;
+    max-width: 800px; /* Limita el ancho del texto para que no sea tan largo en pantallas grandes */
+}
 
 /* Sección principal con banner */
 .hero {
@@ -87,18 +107,69 @@ nav ul li a {
 /* Sección de modos de juego */
 .game-modes {
     padding: 50px;
-    text-align: center;
+    background-color: #e6dccf;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
 }
+
+.game-modes h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
 .modes {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 50px;
 }
+
 .mode {
-    background: #222;
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    background: #f5f1e7;
     border-radius: 10px;
-    width: 30%;
+    padding: 20px;
+    position: relative;
+}
+
+.mode img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transform: rotate(-5deg);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.mode-info {
+    margin-left: 30px;
+    max-width: 600px;
+}
+
+.mode-info h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.mode-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff6600;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #cc5500;
 }
 
 /* Galería */
@@ -124,22 +195,28 @@ nav ul li a {
 .carousel img.active {
     display: block;
 }
-.carousel .prev, .carousel .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.5);
-    border: none;
-    padding: 10px;
+
+/* Dots */
+.dots-container {
+    text-align: center;
+    position: relative;
+    margin-top: 10px;
+  }
+
+  .dot {
     cursor: pointer;
-    font-size: 18px;
-}
-.carousel .prev {
-    left: 10px;
-}
-.carousel .next {
-    right: 10px;
-}
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .dot.active, .dot:hover {
+    background-color: #717171;
+  }
 
 /* Pie de página */
 footer {
@@ -147,6 +224,7 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
 
 /* Media Queries */
 @media (max-width: 768px) {

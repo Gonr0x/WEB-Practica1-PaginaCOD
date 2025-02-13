@@ -38,20 +38,34 @@
     <section class="game-modes">
         <h2>MODOS DE JUEGO</h2>
         <div class="modes">
+            <!-- Primer Modo (Campaña) -->
             <div class="mode">
-                <h3>Campaña</h3>
-                <p>Vive una historia intensa con decisiones que afectan el futuro.</p>
-                <a href="#" class="btn">Más Información</a>
+                <img src="imagenes/campaña.jpg" alt="Campaña">
+                <div class="mode-info">
+                    <h3>Campaña</h3>
+                    <p>La campaña de Black Ops 6 ofrece un juego dinámico que incluye una gran variedad de espacios con escenas icónicas.</p>
+                    <a href="#" class="btn">Más Información</a>
+                </div>
             </div>
-            <div class="mode">
-                <h3>Multijugador</h3>
-                <p>Compite con jugadores de todo el mundo en frenéticas batallas.</p>
-                <a href="#" class="btn">Más Información</a>
+    
+            <!-- Segundo Modo (Multijugador) - Imagen a la derecha -->
+            <div class="mode mode-reverse">
+                <img src="imagenes/multijugador.jpg" alt="Multijugador">
+                <div class="mode-info">
+                    <h3>Multijugador</h3>
+                    <p>Compite con jugadores de todo el mundo en frenéticas batallas. Disfruta de nuevos mapas y modos de juego innovadores.</p>
+                    <a href="#" class="btn">Más Información</a>
+                </div>
             </div>
+    
+            <!-- Tercer Modo (Zombis) -->
             <div class="mode">
-                <h3>Zombis</h3>
-                <p>Sobrevive a hordas de zombis en mapas desafiantes.</p>
-                <a href="#" class="btn">Más Información</a>
+                <img src="imagenes/zombis.jpg" alt="Zombis">
+                <div class="mode-info">
+                    <h3>Zombis</h3>
+                    <p>Sobrevive a hordas de zombis en mapas desafiantes y descubre nuevas estrategias para resistir.</p>
+                    <a href="#" class="btn">Más Información</a>
+                </div>
             </div>
         </div>
     </section>
@@ -60,39 +74,21 @@
     <section class="gallery">
         <h2>Galería</h2>
         <div class="carousel">
-            <button class="prev">&#10094;</button>
             <img src="/media/images/galeria/foto1.jpg" class="active" alt="Imagen 1">
             <img src="/media/images/galeria/foto2.jpg" alt="Imagen 2">
             <img src="/media/images/galeria/foto3.jpg" alt="Imagen 3">
             <img src="/media/images/galeria/foto4.jpg" alt="Imagen 4">
             <img src="/media/images/galeria/foto5.jpg" alt="Imagen 5">
-
-
-            <button class="next">&#10095;</button>
+        </div>
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
         </div>
     </section>
 
-    <script>
-        let index = 0;
-        const images = document.querySelectorAll('.carousel img');
-        const prevButton = document.querySelector('.prev');
-        const nextButton = document.querySelector('.next');
-
-        function showImage(idx) {
-            images.forEach(img => img.classList.remove('active'));
-            images[idx].classList.add('active');
-        }
-
-        prevButton.addEventListener('click', () => {
-            index = (index === 0) ? images.length - 1 : index - 1;
-            showImage(index);
-        });
-
-        nextButton.addEventListener('click', () => {
-            index = (index === images.length - 1) ? 0 : index + 1;
-            showImage(index);
-        });
-    </script>
     
     <!-- Pie de página -->
     <footer>

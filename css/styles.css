@@ -105,15 +105,40 @@ nav ul li a {
 .gallery {
     padding: 50px;
     background-color: #111;
+    text-align: center;
+    position: relative;
 }
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 600px;
+    margin: auto;
 }
-.gallery img {
+.carousel img {
     width: 100%;
     border-radius: 10px;
+    display: none;
+}
+.carousel img.active {
+    display: block;
+}
+.carousel .prev, .carousel .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.carousel .prev {
+    left: 10px;
+}
+.carousel .next {
+    right: 10px;
 }
 
 /* Pie de página */
@@ -121,4 +146,32 @@ footer {
     background-color: #000;
     text-align: center;
     padding: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel {
+        max-width: 100%;
+    }
+
+    .carousel button {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    .hero {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel button {
+        font-size: 16px;
+        padding: 5px;
+    }
 }

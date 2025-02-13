@@ -57,16 +57,42 @@
     </section>
     
     <!-- Sección de galería -->
-    <section id="gallery" class="gallery">
-        <h2>GALLERY</h2>
-        <div class="gallery-grid">
-            <img src="media/images/galeria/foto1.jpg" alt="Imagen 1">
-            <img src="media/images/galeria/foto2.jpg" alt="Imagen 2">
-            <img src="media/images/galeria/foto3.jpg" alt="Imagen 3">
-            <img src="media/images/galeria/foto4.jpg" alt="Imagen 4">
-            <img src="media/images/galeria/foto5.jpg" alt="Imagen 5">
+    <section class="gallery">
+        <h2>Galería</h2>
+        <div class="carousel">
+            <button class="prev">&#10094;</button>
+            <img src="/media/images/galeria/foto1.jpg" class="active" alt="Imagen 1">
+            <img src="/media/images/galeria/foto2.jpg" alt="Imagen 2">
+            <img src="/media/images/galeria/foto3.jpg" alt="Imagen 3">
+            <img src="/media/images/galeria/foto4.jpg" alt="Imagen 4">
+            <img src="/media/images/galeria/foto5.jpg" alt="Imagen 5">
+
+
+            <button class="next">&#10095;</button>
         </div>
     </section>
+
+    <script>
+        let index = 0;
+        const images = document.querySelectorAll('.carousel img');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+
+        function showImage(idx) {
+            images.forEach(img => img.classList.remove('active'));
+            images[idx].classList.add('active');
+        }
+
+        prevButton.addEventListener('click', () => {
+            index = (index === 0) ? images.length - 1 : index - 1;
+            showImage(index);
+        });
+
+        nextButton.addEventListener('click', () => {
+            index = (index === images.length - 1) ? 0 : index + 1;
+            showImage(index);
+        });
+    </script>
     
     <!-- Pie de página -->
     <footer>
@@ -79,5 +105,7 @@
         </div>
     </footer>
     <script src="JS/script.js"></script>
+    <!-- JQUERY CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>

@@ -1,20 +1,22 @@
 
-/* *{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
+*{
+    font-family: 'BlackOps', sans-serif;
 }
 
-header{
-  background-color: rgb(87, 22, 22);
-} */
 
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'BlackOps';
+    src: url('Fonts/Call\ of\ Ops\ Duty.otf') format('woff2'),
+         url('Fonts/Call\ of\ Ops\ Duty.otf') format('woff');
+  }
 
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'BlackOps', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #000;
@@ -23,6 +25,7 @@ body {
 
 /* Encabezado y navegación */
 header {
+    font-family: 'BlackOps', sans-serif;
     background-color: #111;
     padding: 20px;
 }
@@ -67,6 +70,7 @@ nav ul li a {
 }
 
 .description h2 {
+    color: #ff6600;
     font-size: 2rem;
     margin-bottom: 15px;
 }
@@ -77,39 +81,80 @@ nav ul li a {
 }
 
 /* Sección principal con banner */
+.highlight {
+    color: #ff6600; /* Naranja */
+    font-weight: bold;
+}
+
 .hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    height: 500px;
+    background-image: url('/media/images/inicio/fondo1.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* Asegura que cubra todo el espacio */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita repeticiones */
+    height: 80vh; /* Ajusta la altura según necesidad */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    color: white;
+    position: relative;
 }
+
+/* Oscurecer la imagen para mejorar el contraste con el texto */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Capa semitransparente */
+}
+
+/* Ajustes del contenido */
 .hero-content {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
+    position: relative;
+    z-index: 1;
 }
+
 .hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff6600;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
+    font-size: 3rem;
     font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn {
+    background-color: #ff7300;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
 /* Sección de modos de juego */
 .game-modes {
+    background-image: url('ruta-del-fondo.jpg'); /* Imagen con líneas y detalles técnicos */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efecto de fondo fijo */
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Contenedor del "papel viejo" */
+.modes-container {
+    background: url('/media/images/inicio/fondo1.png'); /* Imagen de papel envejecido */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     padding: 50px;
-    background-color: #e6dccf;
-    text-align: left;
-    font-family: 'Arial', sans-serif;
+    width: 80%;
+    max-width: 1000px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5); /* Sombra para dar efecto de profundidad */
 }
 
 .game-modes h2 {
@@ -128,7 +173,6 @@ nav ul li a {
 .mode {
     display: flex;
     align-items: center;
-    background: #f5f1e7;
     border-radius: 10px;
     padding: 20px;
     position: relative;
@@ -157,6 +201,35 @@ nav ul li a {
     line-height: 1.6;
 }
 
+/* Aplicar solo al segundo elemento */
+.mode-reverse {
+    flex-direction: row-reverse;
+}
+
+.mode img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    transform: rotate(-5deg);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Rotación opuesta en el segundo elemento */
+.mode-reverse img { 
+    transform: rotate(5deg);
+}
+
+.mode-info {
+    margin-left: 30px;
+    max-width: 600px;
+}
+
+/* Ajustar margen cuando el modo está invertido */
+.mode-reverse .mode-info {
+    margin-left: 0;
+    margin-right: 30px;
+}
+
 .btn {
     display: inline-block;
     background: #ff6600;
@@ -171,6 +244,8 @@ nav ul li a {
 .btn:hover {
     background: #cc5500;
 }
+
+
 
 /* Galería */
 .gallery {
@@ -220,9 +295,69 @@ nav ul li a {
 
 /* Pie de página */
 footer {
-    background-color: #000;
+    background-color: #111;
+    padding: 40px 0;
+    color: #fff;
     text-align: center;
-    padding: 20px;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos de los íconos de redes sociales */
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+    transform: scale(1.2);
+}
+
+/* Estilos de los enlaces */
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #ccc;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ff7300;
+}
+
+/* Información legal */
+.footer-legal p {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Logo de Activision */
+.footer-logo {
+    margin-top: 20px;
+}
+
+.footer-logo img {
+    width: 120px;
+    opacity: 0.8;
 }
 
 

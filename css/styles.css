@@ -181,7 +181,7 @@ nav ul li a {
 }
 
 .mode img {
-    width: 300px;
+    width: 500px;
     height: auto;
     border-radius: 10px;
     transform: rotate(-5deg);
@@ -210,7 +210,6 @@ nav ul li a {
 }
 
 .mode img {
-    width: 300px;
     height: auto;
     border-radius: 10px;
     transform: rotate(-5deg);

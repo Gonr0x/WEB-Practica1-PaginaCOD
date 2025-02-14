@@ -64,32 +64,55 @@ $(document).ready(function () {
     setInterval(nextSlide, 5000); // Cambia cada 5 segundos
 });
 
-//Formulario
-$(document).ready(function () {
-    const modal = $("#signup-modal");
+$(document).ready(function() {
+    $("#registroForm").submit(function(event) {
+        event.preventDefault(); // Evita que el formulario se envíe automáticamente
 
-    // Mostrar modal al hacer clic en "Sign Up"
-    $(".signup").click(function (event) {
-        event.preventDefault();
-        modal.fadeIn(); // Animación de entrada
-    });
+        let nombre = $("#nombre").val().trim();
+        let email = $("#email").val().trim();
+        let password = $("#password").val();
+        let confirmPassword = $("#confirmPassword").val();
+        let isValid = true;
 
-    // Cerrar modal al hacer clic en la "×"
-    $(".close").click(function () {
-        modal.fadeOut(); // Animación de salida
-    });
+        // Limpiar mensajes de error
+        $(".error").text("");
 
-    // Cerrar modal al hacer clic fuera del contenido
-    $(window).click(function (event) {
-        if ($(event.target).is(modal)) {
-            modal.fadeOut();
+        // Validar nombre
+        if (nombre === "") {
+            $("#errorNombre").text("El nombre es obligatorio.");
+            isValid = false;
         }
-    });
 
-    // Manejar el envío del formulario
-    $("#modalRegisterForm").submit(function (event) {
-        event.preventDefault();
-        alert("¡Registro exitoso!");
-        modal.fadeOut();
+        // Validar email
+        let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (email === "") {
+            $("#errorEmail").text("El correo es obligatorio.");
+            isValid = false;
+        } else if (!emailPattern.test(email)) {
+            $("#errorEmail").text("El correo no es válido.");
+            isValid = false;
+        }
+
+        // Validar contraseña
+        if (password.length < 6) {
+            $("#errorPassword").text("La contraseña debe tener al menos 6 caracteres.");
+            isValid = false;
+        }
+
+        // Validar confirmación de contraseña
+        if (confirmPassword === "") {
+            $("#errorConfirmPassword").text("Confirma tu contraseña.");
+            isValid = false;
+        } else if (password !== confirmPassword) {
+            $("#errorConfirmPassword").text("Las contraseñas no coinciden.");
+            isValid = false;
+        }
+
+        // Si todo está bien, mostrar mensaje de éxito
+        if (isValid) {
+            $("#mensajeExito").fadeIn();
+            setTimeout(() => $("#mensajeExito").fadeOut(), 3000);
+            $("#registroForm")[0].reset();
+        }
     });
 });

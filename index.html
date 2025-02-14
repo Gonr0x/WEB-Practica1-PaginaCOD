@@ -40,7 +40,7 @@
         <div class="modes">
             <!-- Primer Modo (Campaña) -->
             <div class="mode">
-                <img src="imagenes/campaña.jpg" alt="Campaña">
+                <img src="/media/images/modos/campaña.png" alt="Campaña">
                 <div class="mode-info">
                     <h3>Campaña</h3>
                     <p>La campaña de Black Ops 6 ofrece un juego dinámico que incluye una gran variedad de espacios con escenas icónicas.</p>
@@ -50,7 +50,7 @@
     
             <!-- Segundo Modo (Multijugador) - Imagen a la derecha -->
             <div class="mode mode-reverse">
-                <img src="imagenes/multijugador.jpg" alt="Multijugador">
+                <img src="/media/images/modos/multijugador.png" alt="Multijugador">
                 <div class="mode-info">
                     <h3>Multijugador</h3>
                     <p>Compite con jugadores de todo el mundo en frenéticas batallas. Disfruta de nuevos mapas y modos de juego innovadores.</p>
@@ -60,7 +60,7 @@
     
             <!-- Tercer Modo (Zombis) -->
             <div class="mode">
-                <img src="imagenes/zombis.jpg" alt="Zombis">
+                <img src="/media/images/modos/zombies.jpg" alt="Zombis">
                 <div class="mode-info">
                     <h3>Zombis</h3>
                     <p>Sobrevive a hordas de zombis en mapas desafiantes y descubre nuevas estrategias para resistir.</p>
@@ -75,13 +75,16 @@
         <h2>Galería</h2>
         <div class="carousel">
             <!-- Videos de YouTube -->
-            <iframe class="carousel-item active" src="https://www.youtube.com/watch?v=N391710X_TM" frameborder="0" allowfullscreen></iframe>
+            <!-- <iframe class="carousel-item active" src="https://www.youtube.com/watch?v=N391710X_TM" frameborder="0" allowfullscreen></iframe>
             <iframe class="carousel-item" src="https://www.youtube.com/watch?v=pVVAVQcMCHo" frameborder="0" allowfullscreen></iframe>
-            <iframe class="carousel-item" src="https://www.youtube.com/watch?v=2d8fuTMgRSY" frameborder="0" allowfullscreen></iframe>
+            <iframe class="carousel-item" src="https://www.youtube.com/watch?v=2d8fuTMgRSY" frameborder="0" allowfullscreen></iframe> -->
         
             <!-- Imágenes después de los videos -->
-            <img class="carousel-item" src="/media/images/galeria/foto4.jpg.jpg">
-            <img class="carousel-item" src="/media/images/galeria/foto5.jpg.jpg">
+            <img class="carousel-item" src="/media/images/galeria/foto1.jpg">
+            <img class="carousel-item" src="/media/images/galeria/foto2.jpg">
+            <img class="carousel-item" src="/media/images/galeria/foto3.jpg">
+            <img class="carousel-item" src="/media/images/galeria/foto4.jpg">
+            <img class="carousel-item" src="/media/images/galeria/foto5.jpg">
         </div>
         <div class="dots-container">
             <span class="dot" onclick="currentSlide(0)"></span>
@@ -92,16 +95,57 @@
         </div>
     </section>
 
+    <!-- Formulario de Sign Up (oculto por defecto) -->
+    <!-- <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Regístrate</h2>
+            <form id="signup-form">
+                <label for="username">Nombre de usuario:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="btn">Registrarse</button>
+            </form>
+        </div>
+    </div> -->
     
+
+    <!-- Modal de Registro -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Regístrate</h2>
+            <form id="modalRegisterForm">
+                <label for="modal-name">Nombre:</label>
+                <input type="text" id="modal-name" name="name" required>
+
+                <label for="modal-email">Correo Electrónico:</label>
+                <input type="email" id="modal-email" name="email" required>
+
+                <label for="modal-password">Contraseña:</label>
+                <input type="password" id="modal-password" name="password" required>
+
+                <button type="submit" class="btn">Registrarse</button>
+            </form>
+        </div>
+    </div>
+
+
     <!-- Pie de página -->
     <footer>
         <div class="footer-container">
             <!-- Redes Sociales -->
             <div class="social-links">
-                <a href="#"><img src="icon-facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="icon-twitter.png" alt="Twitter"></a>
-                <a href="#"><img src="icon-youtube.png" alt="YouTube"></a>
-                <a href="#"><img src="icon-instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="/media/images/logos/facebook_blanco.png" alt="Facebook"></a>
+                <a href="#"><img src="/media/images/logos/X_blanco.png" alt="Twitter"></a>
+                <a href="#"><img src="/media/images/logos/youtube_blanco.png" alt="YouTube"></a>
+                <a href="#"><img src="/media/images/logos/instagram_blanco.png" alt="Instagram"></a>
             </div>
     
             <!-- Links principales -->
@@ -119,12 +163,13 @@
     
             <!-- Logo de Activision -->
             <div class="footer-logo">
-                <img src="activision-logo.png" alt="Activision">
+                <img src="/media/images/logos/logo_blanco_activision.png" alt="Activision">
             </div>
         </div>
     </footer>
     <script src="JS/script.js"></script>
     <!-- JQUERY CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 </html>

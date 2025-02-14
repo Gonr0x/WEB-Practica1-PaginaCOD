@@ -134,7 +134,7 @@ nav ul li a {
 /* Sección de modos de juego */
 .game-modes {
 
-    background-image: url('ruta-del-fondo.jpg'); /* Imagen con líneas y detalles técnicos */
+    background-image: url('../media/images/inicio/fondo2.jpg'); /* Imagen con líneas y detalles técnicos */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Efecto de fondo fijo */
@@ -147,7 +147,7 @@ nav ul li a {
 
 /* Contenedor del "papel viejo" */
 .modes-container {
-    background: url('/media/images/inicio/fondo1.png'); /* Imagen de papel envejecido */
+    background: url('../media/images/inicio/fondo2.jpg'); /* Imagen de papel envejecido */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -158,7 +158,7 @@ nav ul li a {
 }
 
 .game-modes h2 {
-    font-size: 2.5rem;
+    font-size: 5.5rem;
     font-weight: bold;
     text-align: left;
     margin-bottom: 30px;
@@ -192,13 +192,14 @@ nav ul li a {
 }
 
 .mode-info h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 
 .mode-info p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: 1.6;
+
 }
 
 /* Aplicar solo al segundo elemento */
@@ -372,6 +373,116 @@ footer {
     width: 120px;
     opacity: 0.8;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    text-align: center;
+}
+
+/* Botón Sign Up */
+.signup {
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.signup:hover {
+    background-color: #b20710;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido del Modal */
+.modal-content {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    width: 35%;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Inputs */
+.modal-content input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #00ff00;
+    background-color: #333;
+    color: white;
+}
+
+/* Botón de Registro */
+.modal-content .btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-content .btn:hover {
+    background-color: #b20710;
+}
+
+/* Botón de Cierre */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.close:hover {
+    color: #e50914;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Media Queries */

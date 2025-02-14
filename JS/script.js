@@ -64,3 +64,32 @@ $(document).ready(function () {
     setInterval(nextSlide, 5000); // Cambia cada 5 segundos
 });
 
+//Formulario
+$(document).ready(function () {
+    const modal = $("#signup-modal");
+
+    // Mostrar modal al hacer clic en "Sign Up"
+    $(".signup").click(function (event) {
+        event.preventDefault();
+        modal.fadeIn(); // Animación de entrada
+    });
+
+    // Cerrar modal al hacer clic en la "×"
+    $(".close").click(function () {
+        modal.fadeOut(); // Animación de salida
+    });
+
+    // Cerrar modal al hacer clic fuera del contenido
+    $(window).click(function (event) {
+        if ($(event.target).is(modal)) {
+            modal.fadeOut();
+        }
+    });
+
+    // Manejar el envío del formulario
+    $("#modalRegisterForm").submit(function (event) {
+        event.preventDefault();
+        alert("¡Registro exitoso!");
+        modal.fadeOut();
+    });
+});

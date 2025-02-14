@@ -3,7 +3,6 @@
     font-family: 'BlackOps', sans-serif;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
@@ -87,7 +86,7 @@ nav ul li a {
 }
 
 .hero {
-    background-image: url('/media/images/inicio/fondo1.jpg'); /* Ruta de la imagen */
+    background-image: url('../media/images/inicio/fondo1.png'); /* Ruta de la imagen */
     background-size: cover; /* Asegura que cubra todo el espacio */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita repeticiones */

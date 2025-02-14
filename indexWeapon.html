@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weapons Selection</title>
+    <link rel="stylesheet" href="/css/stylesWeapon.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Título -->
+        <h1>WEAPONS</h1>
+
+        <!-- Menú de opciones -->
+        <div class="menu">
+            <button>Principal</button>
+            <button>Secondary</button>
+            <button>Skin</button>
+        </div>
+
+        <!-- Carruseles -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="/media/images/armas/primarias/Ametralladoras_ligeras/HAMR.png" alt="Weapon 1">
+                <img class="selected" src="/media/images/armas/primarias/Rifles_francotirador/Ballista.png" alt="Weapon 2">
+                <img src="/media/images/armas/primarias/Escopetas/KSG.png" alt="Weapon 3">
+            </div>
+            <div class="carousel">
+                <img src="/media/images/armas/secundarias/Especiales_sec/Crossbow.png" alt="Secondary 1">
+                <img class="selected" src="/media/images/armas/secundarias/lanzacohetes/FHJ-18_AA.png" alt="Secondary 2">
+                <img src="/media/images/armas/secundarias/Pistolas/Executioner.png" alt="Secondary 3">
+            </div>
+            <div class="carousel">
+                <img src="/media/images/armas/skins/skin2.png" alt="Skin 1">
+                <img class="selected" src="/media/images/armas/skins/skin1.png" alt="Skin 2">
+                <img src="/media/images/armas/skins/skin3.png" alt="Skin 3">
+            </div>
+        </div>
+
+        <!-- Botón de aleatorio -->
+        <button id="randomize-btn">
+            <img src="img/random-icon.png" alt="Random">
+        </button>
+
+        <!-- Botón de regreso -->
+        <a href="indexGame.html" class="back-button">⬅</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+/* Estilos generales */
+body {
+    background-color: #191919;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.container {
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+/* Título */
+h1 {
+    background-color: black;
+    padding: 15px;
+    display: inline-block;
+    border-top: 5px solid orange;
+    border-bottom: 5px solid orange;
+}
+
+/* Menú de opciones */
+.menu {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.menu button {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 2px solid orange;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.menu button.active {
+    background: orange;
+}
+
+/* Carruseles */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    border: 2px solid white;
+    padding: 10px;
+    background: black;
+}
+
+/* Imágenes dentro del carrusel */
+.carousel img {
+    width: 100px;
+    opacity: 0.6;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Imagen seleccionada */
+.carousel img.selected {
+    transform: scale(1.2);
+    opacity: 1;
+    border: 3px solid orange;
+}
+
+/* Botón de aleatorizar */
+#randomize-btn {
+    background: orange;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#randomize-btn img {
+    width: 40px;
+}

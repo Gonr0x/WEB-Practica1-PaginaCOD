@@ -134,6 +134,7 @@ nav ul li a {
 
 /* Sección de modos de juego */
 .game-modes {
+
     background-image: url('ruta-del-fondo.jpg'); /* Imagen con líneas y detalles técnicos */
     background-size: cover;
     background-position: center;
@@ -262,13 +263,26 @@ nav ul li a {
     max-width: 600px;
     margin: auto;
 }
-.carousel img {
+
+.carousel-item {
     width: 100%;
-    border-radius: 10px;
+    height: 350px; /* Ajusta la altura según tu diseño */
     display: none;
 }
-.carousel img.active {
+
+.carousel-item.active {
     display: block;
+}
+
+/* Ajustar el tamaño de los iframes de YouTube */
+.carousel iframe {
+    width: 100%;
+    height: 350px; /* Asegúrate de que tenga la misma altura que las imágenes */
+}
+.carousel img {
+    width: 100%;
+    border-radius: 350px;
+    display: none;
 }
 
 /* Dots */

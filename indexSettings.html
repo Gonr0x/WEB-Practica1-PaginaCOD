@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración</title>
+    <script>
+        function updateValue(id, valueId) {
+            document.getElementById(valueId).value = document.getElementById(id).value;
+        }
+    </script>
+    <link rel="stylesheet" href="css/styleSettings.css">
+</head>
+<body>
+    <div class="settings-container">
+        <h1>SETTINGS</h1>
+        
+        <div class="section">
+            <h2>VOLUME</h2>
+            <div class="slider-container">
+                <label>MASTER VOLUME</label>
+                <input type="range" min="0" max="100" value="50" id="volume-slider" oninput="updateValue('volume-slider', 'volume-value')">
+                <input type="text" id="volume-value" class="value-box" value="50" readonly>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>VIDEO</h2>
+            <div class="slider-container">
+                <label>RESOLUCIÓN</label>
+                <input type="range" min="0" max="100" value="50" id="resolution-slider" oninput="updateValue('resolution-slider', 'resolution-value')">
+                <input type="text" id="resolution-value" class="value-box" value="50" readonly>
+            </div>
+            <br>
+            <div class="dropdown-container">
+                <label>CALIDAD GRÁFICA</label>
+                <select id="graphics-quality">
+                    <option value="low">Baja</option>
+                    <option value="medium" selected>Media</option>
+                    <option value="high">Alta</option>
+                </select>
+            </div>
+        </div>
+        <button class="back-button" onclick="window.location.href='indexGame.html'">Volver a Inicio</button>
+    </div>
+</body>
+</html>

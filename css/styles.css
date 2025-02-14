@@ -1,21 +1,23 @@
 
 *{
-    font-family: 'BlackOps', sans-serif;
+    font-family: 'Black Ops One', sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-@font-face {
-    font-family: 'BlackOps';
-    src: url('Fonts/Call\ of\ Ops\ Duty.otf') format('woff2'),
-         url('Fonts/Call\ of\ Ops\ Duty.otf') format('woff');
+
+.black-ops-one-regular {
+    font-family: "Black Ops One", serif;
+    font-weight: 400;
+    font-style: normal;
   }
+  
 
 /* Estilos generales */
 body {
-    font-family: 'BlackOps', sans-serif;
+    font-family: 'Black Ops One', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #000;
@@ -24,7 +26,7 @@ body {
 
 /* Encabezado y navegación */
 header {
-    font-family: 'BlackOps', sans-serif;
+    font-family: 'Black Ops One', sans-serif;
     background-color: #111;
     padding: 20px;
 }

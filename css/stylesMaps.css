@@ -1,5 +1,15 @@
+*{font-family: "Black Ops One" ;
+}
+
+
+.black-ops-one-regular {
+font-family: "Black Ops One", serif;
+font-weight: 400;
+font-style: normal;
+}
+
 body {
-    font-family: 'BlackOps', sans-serif;
+    font-family: 'Black Ops One', sans-serif;
     background: url('../media/images/inicio/fondoMenus.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;

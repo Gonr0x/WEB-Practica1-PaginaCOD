@@ -21,31 +21,43 @@
         <!-- Carruseles -->
         <div class="carousel-container">
             <div class="carousel">
-                <img src="/media/images/armas/primarias/Ametralladoras_ligeras/HAMR.png" alt="Weapon 1">
-                <img class="selected" src="/media/images/armas/primarias/Rifles_francotirador/Ballista.png" alt="Weapon 2">
-                <img src="/media/images/armas/primarias/Escopetas/KSG.png" alt="Weapon 3">
+                <button class="arrow arrow-up">&#9650;</button>
+                <div class="image-container">
+                    <img src="/media/images/armas/primarias/Ametralladoras_ligeras/HAMR.png" alt="Weapon 1">
+                    <img class="selected" src="/media/images/armas/primarias/Rifles_francotirador/Ballista.png" alt="Weapon 2">
+                    <img src="/media/images/armas/primarias/Escopetas/KSG.png" alt="Weapon 3">
+                </div>
+                <button class="arrow arrow-down">&#9660;</button>
             </div>
             <div class="carousel">
-                <img src="/media/images/armas/secundarias/Especiales_sec/Crossbow.png" alt="Secondary 1">
-                <img class="selected" src="/media/images/armas/secundarias/lanzacohetes/FHJ-18_AA.png" alt="Secondary 2">
-                <img src="/media/images/armas/secundarias/Pistolas/Executioner.png" alt="Secondary 3">
+                <button class="arrow arrow-up">&#9650;</button>
+                <div class="image-container">
+                    <img src="/media/images/armas/secundarias/Especiales_sec/Crossbow.png" alt="Secondary 1">
+                    <img class="selected" src="/media/images/armas/secundarias/lanzacohetes/FHJ-18_AA.png" alt="Secondary 2">
+                    <img src="/media/images/armas/secundarias/Pistolas/Executioner.png" alt="Secondary 3">
+                </div>
+                <button class="arrow arrow-down">&#9660;</button>
             </div>
             <div class="carousel">
-                <img src="/media/images/armas/skins/skin2.png" alt="Skin 1">
-                <img class="selected" src="/media/images/armas/skins/skin1.png" alt="Skin 2">
-                <img src="/media/images/armas/skins/skin3.png" alt="Skin 3">
+                <button class="arrow arrow-up">&#9650;</button>
+                <div class="image-container">
+                    <img src="/media/images/armas/skins/skin2.png" alt="Skin 1">
+                    <img class="selected" src="/media/images/armas/skins/skin1.png" alt="Skin 2">
+                    <img src="/media/images/armas/skins/skin3.png" alt="Skin 3">
+                </div>
+                <button class="arrow arrow-down">&#9660;</button>
             </div>
         </div>
 
         <!-- Botón de aleatorio -->
         <button id="randomize-btn">
-            <img src="img/random-icon.png" alt="Random">
+            <img src="/media/images/logos/random_icon.png" alt="Random">
         </button>
 
         <!-- Botón de regreso -->
-        <a href="indexGame.html" class="back-button">⬅</a>
+        <button class="back-button" onclick="window.location.href='indexGame.html'">BACK</button>
     </div>
 
-    <script src="script.js"></script>
+    <script src="/JS/weapons.js"></script>
 </body>
 </html>

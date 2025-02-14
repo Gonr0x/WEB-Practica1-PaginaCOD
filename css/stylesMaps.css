@@ -1,0 +1,58 @@
+body {
+    font-family: 'BlackOps', sans-serif;
+    background: url('../media/images/inicio/fondoMenus.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+.header {
+    background-color: #ff6600;
+    padding: 10px;
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.maps {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.map {
+    border: 3px solid orange;
+    background: black;
+    padding: 10px;
+    cursor: pointer;
+    width: 250px;
+}
+.map img {
+    width: 100%;
+    height: auto;
+}
+.map p {
+    margin: 10px 0 0;
+    font-size: 18px;
+}
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff6600;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.back-button:hover {
+    background: #e65500;
+}

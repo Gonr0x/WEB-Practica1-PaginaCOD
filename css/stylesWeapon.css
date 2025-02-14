@@ -1,14 +1,19 @@
 /* Estilos generales */
 body {
-    background-color: #191919;
+    font-family: 'BlackOps', sans-serif;
+    background: url('../media/images/inicio/fondoMenus.jpg') no-repeat center center/cover;
     color: white;
-    font-family: Arial, sans-serif;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 /* Contenedor principal */
 .container {
-    width: 80%;
+    width: 90%;
     margin: auto;
     padding-top: 20px;
 }
@@ -20,6 +25,9 @@ h1 {
     display: inline-block;
     border-top: 5px solid orange;
     border-bottom: 5px solid orange;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 /* Menú de opciones */
@@ -27,27 +35,31 @@ h1 {
     display: flex;
     justify-content: center;
     margin: 20px 0;
+    gap: 15px;
 }
 
 .menu button {
     background: black;
     color: white;
-    padding: 10px 20px;
-    margin: 5px;
-    border: 2px solid orange;
+    padding: 14px 28px;
+    border: 3px solid orange;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+    text-transform: uppercase;
 }
 
 .menu button.active {
     background: orange;
+    color: black;
 }
 
 /* Carruseles */
 .carousel-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     margin-top: 20px;
 }
 
@@ -55,36 +67,114 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 150px;
-    border: 2px solid white;
-    padding: 10px;
-    background: black;
+    width: 200px;
+    border: 3px solid white;
+    padding: 15px;
+    background: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.6);
+    position: relative;
 }
 
 /* Imágenes dentro del carrusel */
 .carousel img {
-    width: 100px;
+    width: 140px;
     opacity: 0.6;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
 }
 
 /* Imagen seleccionada */
 .carousel img.selected {
     transform: scale(1.2);
     opacity: 1;
-    border: 3px solid orange;
+    border: 4px solid orange;
+    border-radius: 8px;
+}
+
+/* Imágenes dentro del carrusel  */
+.image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    height: 100%; 
+    padding: 10px 0;
+}
+
+.carousel img {
+    width: 100px;
+    opacity: 0.6;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    flex-grow: 1;
+}
+
+
+/* Flechas de navegación */
+.arrow {
+    background: orange;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    color: black;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.arrow-up {
+    position: absolute;
+    top: -20px;
+}
+
+.arrow-down {
+    position: absolute;
+    bottom: -20px;
+}
+
+.carousel .arrow:hover {
+    background: orange;
 }
 
 /* Botón de aleatorizar */
 #randomize-btn {
     background: orange;
     border: none;
-    padding: 10px;
+    padding: 15px;
     margin-top: 20px;
     cursor: pointer;
     border-radius: 50%;
+    transition: transform 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.6);
 }
 
 #randomize-btn img {
-    width: 40px;
+    width: 50px;
+}
+
+#randomize-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Botón de regreso */
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #e65500;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: bold;}
+.back-button:hover {
+    background: #e65500;
 }

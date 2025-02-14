@@ -6,7 +6,7 @@
 
 body {
     font-family: 'BlackOps', sans-serif;
-    background: url('image.png') no-repeat center center/cover;
+    background: url('../media/images/inicio/fondoMenus.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
     display: flex;
@@ -68,8 +68,8 @@ select {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1em;
-}
+    font-size: 1.5em;
+    font-weight: bold;}
 .back-button:hover {
     background: #e65500;
 }

@@ -375,29 +375,129 @@ footer {
 
 
 /* Media Queries */
-@media (max-width: 768px) {
-    nav ul {
+@media (max-width: 1024px) {
+    nav {
         flex-direction: column;
         align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .mode {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mode-reverse {
+        flex-direction: column;
+    }
+
+    .mode-info {
+        margin: 20px 0 0 0;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .description {
+        padding: 40px 20px;
+        height: auto;
+    }
+}
+
+/* Para móviles (pantallas menores a 768px) */
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .mode img {
+        width: 90%;
+        margin: 0 auto;
+        transform: none;
+    }
+
+    .mode-info, .mode-reverse .mode-info {
+        margin: 20px 0 0 0;
+        max-width: 90%;
+    }
+
+    .game-modes {
+        padding: 40px 10px;
     }
 
     .carousel {
         max-width: 100%;
+        padding: 0 10px;
     }
 
-    .carousel button {
-        font-size: 18px;
-        padding: 8px;
+    .carousel-item,
+    .carousel iframe {
+        height: 250px;
     }
 
-    .hero {
-        height: 40vh;
+    .gallery {
+        padding: 30px 10px;
+    }
+
+    footer {
+        padding: 20px 10px;
+    }
+
+    .footer-links a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .social-links a {
+        margin: 5px;
     }
 }
 
+/* Para móviles muy pequeños (pantallas menores a 480px) */
 @media (max-width: 480px) {
-    .carousel button {
-        font-size: 16px;
-        padding: 5px;
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .description h2 {
+        font-size: 1.4rem;
+    }
+
+    .description p {
+        font-size: 1rem;
+    }
+
+    .mode-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-item,
+    .carousel iframe {
+        height: 200px;
+    }
+
+    .btn {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+
+    .footer-logo img {
+        width: 90px;
     }
 }

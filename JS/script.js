@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (playButton) {
         playButton.addEventListener("click", function(event) {
             event.preventDefault(); // Evitar comportamiento por defecto
-            window.location.href = "../indexGame.html";
+            window.location.href = "indexGame.html";
         });
     }
 });

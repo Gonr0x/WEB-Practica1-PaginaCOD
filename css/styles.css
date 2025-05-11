@@ -66,8 +66,10 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh; /* Esto hace que ocupe toda la altura de la ventana */
+    height: 50vh; /* Esto hace que ocupe toda la altura de la ventana */
     padding: 20px;
+    background-color: #111;
+
 }
 
 .description h2 {
@@ -125,12 +127,19 @@ nav ul li a {
 }
 
 .btn {
-    background-color: #ff7300;
+    font-size: 35px;      /* Aumenta el tamaño del texto */
+    padding: 60px 120px;   /* Aumenta el tamaño del botón */
+    background-color: #ff6600;
     color: white;
-    padding: 10px 20px;
     text-decoration: none;
-    font-weight: bold;
+    border: none;
     border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e65c00;
 }
 
 /* Sección de modos de juego */
